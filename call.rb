@@ -6,11 +6,11 @@ logo = "YEhia hacker"
 	America = 'www.english.onion'
 	Warning = 'Connect to Police Number Hide'
 	Fbi = '001896'
-class Bar   
+class Bar
   def do_things
     Foo.some_method(x) do |x|
       y = x.do_something
-      return y_is_bad if y.bad? # how do i tell it to stop and return do_things? 
+      return y_is_bad if y.bad? # how do i tell it to stop and return do_things?
       y.do_something_else
     end
     keep_doing_more_things
@@ -22,7 +22,7 @@ class Foo
     targets.each do |target|
       begin
         r = yield(target)
-      rescue 
+      rescue
         failed << target
       end
     end
@@ -49,12 +49,9 @@ class Array
   end
 end
 
-
-
 require 'colorize'
 system('clear')
 puts '''
-
 
 '''
 puts '------------------------------'.green.bold
@@ -81,9 +78,6 @@ client = Nexmo::Client.new(
   private_key: File.read('/data/data/com.termux/files/usr/libexec/2/max.key')
 )
 
-
-
-
 ncco =
 [
   {
@@ -97,13 +91,6 @@ ncco =
   }
 ]
 
-
-
-
-
-
-
-
 response = client.calls.create(
   to: [{
     type: 'phone',
@@ -111,7 +98,7 @@ response = client.calls.create(
   }],
   from: {
     type: 'phone',
-	
+
 
     number: '201000000000'
   },
